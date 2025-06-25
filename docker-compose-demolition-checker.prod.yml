@@ -1,0 +1,72 @@
+version: '3.8'
+
+services:
+  mongo:
+    image: mongo:6.0
+    ports:
+      - "27018:27017"
+
+  redis:
+    image: redis:7.0
+    ports:
+      - "6380:6379"  
+  
+  entry:
+    build:
+      context: ./entry
+      target: prod
+    container_name: entry
+    env_file:
+     - ./.env.prod
+    ports:
+      - "4001:4001"
+    depends_on:
+      - mongo
+      - redis
+    restart: always
+  
+  scraper:
+    build:
+      context: ./scraper
+      target: prod
+    container_name: scraper
+    env_file:
+     - ./.env.prod
+    depends_on:
+      - redis
+    restart: always
+
+  ai_evaluetor:
+    build:
+      context: ./ai_evaluetor
+      target: prod
+    container_name: ai_evaluetor
+    env_file:
+     - ./.env.prod
+    environment:
+      - NODE_ENV=dev
+      - REDIS_HOST=redis
+      - REDIS_PORT=6379
+    depends_on:
+      - redis
+    restart: always
+  
+  results_socket:
+    build:
+      context: ./results_socket
+      target: prod
+    container_name: results_socket
+    env_file:
+     - ./.env.prod
+    ports:
+     - "8080:8080"
+    depends_on:
+      - redis
+      - mongo
+    restart: always
+
+  
+  
+
+
+  

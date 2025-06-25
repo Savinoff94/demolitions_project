@@ -1,0 +1,29 @@
+version: '3.8'
+
+services:
+  entry:
+    build:
+      context: .
+      target: dev
+    volumes:
+      - .:/app
+    ports:
+      - "4001:4001"
+    environment:
+      - NODE_ENV=dev
+      - REDIS_HOST=redis
+      - REDIS_PORT=6379
+      - MONGO=mongodb://mongo:27017/mydatabase
+    depends_on:
+      - mongo
+      - redis
+
+  mongo:
+    image: mongo:6.0
+    ports:
+      - "27018:27017"
+
+  redis:
+    image: redis:7.0
+    ports:
+      - "6380:6379"

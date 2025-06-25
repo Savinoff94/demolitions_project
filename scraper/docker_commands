@@ -1,0 +1,1 @@
+docker compose -f docker-compose-scraper-test.yml up --build

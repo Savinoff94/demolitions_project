@@ -1,0 +1,15 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start:all": "concurrently \"cd ./entry && npm run dev\" \"cd ./ai_evaluetor && npm run dev\" \"cd ./results_socket && npm run dev\" \"cd ./scraper && npm run dev\"",
+    "install:dependencies:all": "concurrently \"cd ./entry && npm install\" \"cd ./ai_evaluetor && npm install\" \"cd ./results_socket && npm install\" \"cd ./scraper && npm install\""
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "concurrently": "^9.2.0"
+  }
+}
