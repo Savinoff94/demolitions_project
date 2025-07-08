@@ -1,3 +1,5 @@
+### **Demolitions checker**
+
 ### Imagine finding an apartment you really like, living there for a year, planning to stay five more—only for the owner to drop the news, on the very day you’re about to renew the lease, that in seven months the building will be demolished to make way for a new one.That happened to me.
 
 While municipalities do publish construction and demolition plans online, they’re often buried in outdated systems and written in dense legal Hebrew. Even native speakers can feel like they need a law degree just to understand what’s planned near their future home.
@@ -39,7 +41,7 @@ That’s why I think the next step should be a map-based tool that shows the ris
 - Renters can get the same helpful info doesnt matter which platform they use for search
 - Landlords won’t be able to hide important details by just leaving out the address
 
-![photo_2025-06-07_17-29-09.jpg](attachment:32ad71ed-9c22-4082-97a9-811a198577f9:photo_2025-06-07_17-29-09.jpg)
+<!-- ![photo_2025-06-07_17-29-09.jpg](attachment:32ad71ed-9c22-4082-97a9-811a198577f9:photo_2025-06-07_17-29-09.jpg) -->
 
 ### More detailed description
 
@@ -90,7 +92,7 @@ That’s why I think the next step should be a map-based tool that shows the ris
 
 ## System
 
-![demolitions_checker.jpg](attachment:701de274-5481-43bb-9c32-c10be16c52de:demolitions_checker.jpg)
+<!-- ![demolitions_checker.jpg](attachment:701de274-5481-43bb-9c32-c10be16c52de:demolitions_checker.jpg) -->
 
 I designed this system to handle two time-consuming tasks:
 
